@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Repository;
 
 import think41.test.entity.Products;
@@ -19,6 +21,10 @@ public class ProductsDao {
 		return productsRepository.findAll();
 	}
 
+	public Page<Products> getPage(int pageNumber, int pageSize) {
+		return productsRepository.findAll(PageRequest.of(pageNumber, pageSize));
+	}
+	
 	public Optional<Products> getProductById(Integer id) {
 		return productsRepository.findById(id);
 	}
