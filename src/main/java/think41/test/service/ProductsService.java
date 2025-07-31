@@ -27,19 +27,17 @@ public class ProductsService {
 	@Autowired
 	private ProductsCSVLoaderService productsCSVLoaderService;
 	
-	public ResponseStructure<Page<Products>> getAllProducts() {
-//		ResponseStructure<List<Products>> response = new ResponseStructure<List<Products>>();
-////		List<Products> products = productsDao.getAllProducts();
-//		
-//		if(!products.isEmpty()) {
-//			response.setStatusCode(HttpStatus.OK.value());
-//			response.setMessage("Products fetched successfully");
-//			response.setData(products);
-//			
-//			return response;
-//		}
-//		throw new NoRecordsFoundException("No products found in the database");
-		return getPage(1, 20);
+	public ResponseStructure<List<Products>> getAllProducts() {
+		ResponseStructure<List<Products>> response = new ResponseStructure<List<Products>>();
+		List<Products> products = productsDao.getAllProducts();
+		if(!products.isEmpty()) {
+			response.setStatusCode(HttpStatus.OK.value());
+			response.setMessage("Products fetched successfully");
+			response.setData(products);
+			
+			return response;
+		}
+		throw new NoRecordsFoundException("No products found in the database");
 	}
 
 	public void loadCsvData() throws IOException {

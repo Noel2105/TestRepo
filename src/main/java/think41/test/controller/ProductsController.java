@@ -4,10 +4,8 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,8 +30,8 @@ public class ProductsController {
 	}	
 	
 	@GetMapping
-	public ResponseEntity<ResponseStructure<Page<Products>>> getAllProducts(){
-		return new ResponseEntity<ResponseStructure<Page<Products>>>(productsService.getAllProducts(), HttpStatus.OK);
+	public ResponseEntity<ResponseStructure<List<Products>>> getAllProducts(){
+		return new ResponseEntity<ResponseStructure<List<Products>>>(productsService.getAllProducts(), HttpStatus.OK);
 	}
 	
 	@GetMapping("/{id}")

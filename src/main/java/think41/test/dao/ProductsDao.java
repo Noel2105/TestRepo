@@ -18,7 +18,7 @@ public class ProductsDao {
 	private ProductsRepository productsRepository;
 
 	public List<Products> getAllProducts() {
-		return productsRepository.findAll();
+		return productsRepository.getAll();
 	}
 
 	public Page<Products> getPage(int pageNumber, int pageSize) {
