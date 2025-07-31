@@ -1,5 +1,7 @@
 package think41.test.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +16,9 @@ public class DepartmentsDao {
 	
 	public Departments addDepartment(Departments departments) {
 		return departmentsRepository.save(departments);
-		
+	}
+	
+	public List<Departments> getAllDepartments() {
+		return departmentsRepository.findAll();
 	}
 }
