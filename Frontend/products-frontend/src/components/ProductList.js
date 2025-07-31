@@ -30,7 +30,7 @@ function ProductList() {
                         width:'200px'
                     }}>
                         <h4>{product.name}</h4>
-                        <p>Price:{product.cost}</p>
+                        <p>Cost:{product.cost}</p>
                         <Link to={`/product/${product.id}`}>
                             View Details
                         </Link>

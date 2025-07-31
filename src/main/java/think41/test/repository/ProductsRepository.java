@@ -12,4 +12,7 @@ public interface ProductsRepository extends JpaRepository<Products, Integer>{
 	@Query(value = "SELECT * FROM products LIMIT 30", nativeQuery = true)
 	List<Products> getAll();
 
+	@Query(value = "SELECT DISTINCT department from products", nativeQuery = true)
+	List<String> fetchUniqueDepts();
+
 }

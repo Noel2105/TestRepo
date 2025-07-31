@@ -28,6 +28,18 @@ public class ProductsDao {
 	public Optional<Products> getProductById(Integer id) {
 		return productsRepository.findById(id);
 	}
+
+	public void updateProducts() {
+//		productsRepository.updateProducts();
+	}
+
+	public List<String> fetchUniqueDepts() {
+		return productsRepository.fetchUniqueDepts();
+	}
+
+	public Products add(Products p) {
+		return productsRepository.save(p);
+	}
 	
 	
 }

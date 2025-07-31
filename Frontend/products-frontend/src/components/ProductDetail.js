@@ -24,7 +24,6 @@ function ProductDetail() {
             <p><strong>Price:</strong>{product.cost}</p>
             <p><strong>Category:</strong>{product.category}</p>
             <p><strong>Brand:</strong>{product.brand}</p>
-            <p><strong>Department:</strong>{product.department}</p>
             <p><strong>Retail Price:</strong>{product.retailPrice}</p>
             
             <Link to="/">Back to product List</Link>

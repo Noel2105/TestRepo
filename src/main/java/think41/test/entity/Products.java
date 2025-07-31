@@ -16,12 +16,15 @@ public class Products {
 	private String name;
 	private String brand;
 	private Double retailPrice;
-	private String department;
 	private String sku;
 	
 	@ManyToOne
 	@JoinColumn(name = "distribution_centres_id")
 	private DistributionCentres distributionCentres;
+	
+	@ManyToOne
+	@JoinColumn(name = "departments_id")
+	private Departments departments;
 
 	public Integer getId() {
 		return id;
@@ -71,14 +74,6 @@ public class Products {
 		this.retailPrice = retailPrice;
 	}
 
-	public String getDepartment() {
-		return department;
-	}
-
-	public void setDepartment(String department) {
-		this.department = department;
-	}
-
 	public String getSku() {
 		return sku;
 	}
@@ -93,5 +88,13 @@ public class Products {
 
 	public void setDistributionCentres(DistributionCentres distributionCentres) {
 		this.distributionCentres = distributionCentres;
+	}
+
+	public void setDepartments(Departments departments) {
+		this.departments = departments;
+	}
+
+	public Departments getDepartments() {
+		return departments;
 	}
 }

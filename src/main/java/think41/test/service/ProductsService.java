@@ -70,4 +70,8 @@ public class ProductsService {
 		}
 		throw new NoRecordsFoundException("No products found in the database");
 	}
+
+	public void updateProducts() {
+		productsDao.updateProducts();
+	}
 }

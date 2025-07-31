@@ -35,7 +35,7 @@ public class ProductsCSVLoaderService {
 				products.setName(data[3]);
 				products.setBrand(data[4]);
 				products.setRetailPrice(Double.parseDouble(data[5]));				
-				products.setDepartment(data[6]);
+//				products.setDepartment(data[6]);
 				products.setSku(data[7]);
 				products.setDistributionCentres((distributionCentresRepository.findById(Integer.parseInt(data[8])).get()));
 				
