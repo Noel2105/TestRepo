@@ -21,10 +21,11 @@ function ProductDetail() {
     return (
         <div style={{padding:'20px'}}>
             <h2>{product.name}</h2>
-            <p><strong>Price:</strong>{product.cost}</p>
+            <p><strong>Cost:</strong>{product.cost}</p>
             <p><strong>Category:</strong>{product.category}</p>
             <p><strong>Brand:</strong>{product.brand}</p>
             <p><strong>Retail Price:</strong>{product.retailPrice}</p>
+            <p><strong>Department:</strong>{product.departments.id}<br/>{product.departments.name}</p>
             
             <Link to="/">Back to product List</Link>
 

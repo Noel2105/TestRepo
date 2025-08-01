@@ -23,31 +23,25 @@ public class Departments {
 	@OneToMany(mappedBy = "departments", cascade = CascadeType.ALL)
 	private List<Products> products;
 
-
 	public Integer getId() {
 		return id;
 	}
-
 
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
-
 	public String getName() {
 		return name;
 	}
-
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
 	public List<Products> getProducts() {
 		return products;
 	}
-
 
 	public void setProducts(List<Products> products) {
 		this.products = products;
